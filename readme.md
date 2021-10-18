@@ -25,6 +25,12 @@ However, we cannot yield any results of causality without quantitative data anal
 It is very helpful in getting the big picture of data collected and identifying proper candidates for further analysis. 
 For example a strong correlation between two parameters will indicate possible good predictors so that researchers can build models with a focus on these parameters.
 
+![Alt text](/EDA1.png)
+
+![Alt text](/EDA2.png)
+
+![Alt text](/eda3.png)
+
 **Statistical Inference:**
 
 The Ratio variable is log-transformed to L_RATIO. L_Ratio exhibits better confirmance to normal distribution and it has a homogeneous variance across age class. 
@@ -41,6 +47,8 @@ We can consider both variables affect the L_Ratio and they don’t have a strong
 Tukey's multiple comparisons of means is performed to evaluate the different levels of CLASS variable. Most values of this variable is significantly related to the 
 variable of interest (L_Ratio). New variables are created by summing or log-transform current features. And a multiple regression model is created. 
 
+![Alt text](/Residual.png)
+
 The Residuals of each variable in the model is analyzed. The display of residuals of the model, as well as the skewness and kurtosis calculations, show a normally distributed pattern. 
 That is one of the indications that the regression model of L_Volume, class and type is fit. The scatter plots shows no obvious pattern of residuals across different class and types. 
 The box plots are also centered at 0 and are well-balanced. These graphs help to show that the model “fits”.
@@ -48,6 +56,9 @@ The box plots are also centered at 0 and are well-balanced. These graphs help to
 **ROC Curve Analysis and Recommendation:**
 
 Construct an ROC curve by plotting (1 - prop.adults) versus (1 - prop.infants). Each point which appears corresponds to a particular volume.value. Numerically integrate the area under the ROC curve.
+
+![Alt text](/ROC.png)
+
 The three cutoff points shown on the ROC curve represents three different strategies, each with a compromise. 
 The maximum difference in harvest rate has the highest cutoff volume and Zero A1 strategy has the lowest cutoff volume. 
 The max. difference strategy harvest least percentage of adults but also least percentage of infants (lowest false positive rate). 
